@@ -1,0 +1,19 @@
+
+
+This project successfully developed an end-to-end Natural Language Processing (NLP) sentiment classification system capable of analysing and categorising user-generated text into Negative, Neutral, and Positive sentiment classes.
+
+The implementation involved a complete machine learning workflow including exploratory data analysis, text preprocessing, feature extraction using TF-IDF, model training, evaluation, and performance interpretation.
+
+The Support Vector Machine classifier achieved an overall accuracy of **79%**, demonstrating that traditional machine learning techniques can effectively perform sentiment analysis when combined with appropriate preprocessing and feature engineering.
+
+The model performed particularly well in identifying negative and neutral sentiments, achieving F1-scores of **0.89** and **0.84** respectively. This indicates strong potential for real-world applications where detecting dissatisfaction or monitoring general customer sentiment is important.
+
+Although positive sentiment classification showed comparatively lower performance, this provides opportunities for future improvement through:
+
+* Larger and more balanced datasets
+* Advanced natural language embeddings
+* Deep learning approaches
+* Hyperparameter optimisation
+* Ensemble modelling techniques
+
+Overall, this project demonstrates practical experience in applying NLP and machine learning techniques to solve real-world text classification problems and provides a strong foundation for developing more advanced AI-driven analytics solutions.
