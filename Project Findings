@@ -1,0 +1,79 @@
+
+
+## 1. Exploratory Data Analysis Findings
+
+The dataset consisted of 732 text-based social media records containing user-generated comments alongside metadata such as platform, country, hashtags, engagement metrics, and timestamps. Initial exploratory analysis focused on understanding sentiment distribution, text characteristics, and relationships between sentiment categories.
+
+The sentiment distribution revealed that the dataset was dominated by **Neutral sentiment**, followed by **Positive sentiment**, while **Negative sentiment represented the smallest proportion of observations**. This imbalance influenced model performance, particularly for minority sentiment classes.
+
+Text analysis showed variations in vocabulary usage, emotional expressions, and engagement patterns across sentiment categories. Positive and negative comments generally contained stronger emotional indicators, while neutral comments were more descriptive and informational.
+
+---
+
+## 2. Data Preprocessing Findings
+
+Several natural language preprocessing techniques were applied to transform raw text into machine-readable features:
+
+* Text cleaning and normalisation
+* Removal of unnecessary characters and noise
+* Tokenization
+* Stop-word removal
+* Text vectorisation using TF-IDF
+
+The TF-IDF approach successfully converted textual information into numerical representations while maintaining the importance of sentiment-related keywords.
+
+Feature engineering improved the model's ability to identify meaningful patterns from user comments and reduced the impact of irrelevant words.
+
+---
+
+## 3. Model Development Findings
+
+A Support Vector Machine (SVM) classifier was developed for multi-class sentiment classification.
+
+The final model achieved:
+
+| Metric            | Result |
+| ----------------- | -----: |
+| Accuracy          |    79% |
+| Negative F1-score |   0.89 |
+| Neutral F1-score  |   0.84 |
+| Positive F1-score |   0.64 |
+
+The model demonstrated strong performance in identifying negative and neutral sentiments. The high recall for negative sentiment indicates that the model successfully captured most negative comments, which is valuable in applications such as customer complaint monitoring and reputation management.
+
+However, positive sentiment classification showed lower performance compared with other classes. This was mainly influenced by:
+
+* Lower representation of positive examples in the dataset
+* Similar language patterns between neutral and positive comments
+* Limited dataset size for complex language modelling
+
+---
+
+## 4. Confusion Matrix Analysis Findings
+
+The confusion matrix analysis showed that:
+
+* Negative sentiments were correctly identified with high reliability.
+* Neutral sentiments achieved strong classification performance due to having the largest number of training examples.
+* Some positive comments were misclassified as neutral, suggesting that positive expressions may have shared similar vocabulary patterns with neutral statements.
+
+Future improvements could involve:
+
+* Increasing the size of the training dataset
+* Applying class balancing techniques such as SMOTE
+* Using advanced transformer-based models such as BERT
+* Incorporating sentiment-specific feature engineering
+
+---
+
+## 5. Business Insights
+
+The developed NLP model demonstrates practical applications in:
+
+* Automated customer feedback analysis
+* Brand reputation monitoring
+* Social media sentiment tracking
+* Customer experience improvement
+* Market perception analysis
+
+By automatically categorising large volumes of text data, organisations can identify emerging customer concerns, measure public opinion, and make data-driven decisions faster.
